@@ -43,4 +43,24 @@ CHIP ALU {
 
     PARTS:
    // Put you code here:
+   And16(a=x[0..15],b=zx,out=zxout);
+   Xor(a=zxout,b=nx,out=xout);
+
+   And16(a=y[0..15],b=zy,out=zyout);
+   Xor(a=zyout,b=ny,out=yout);
+
+   And(a=xout,y=yout,out=xyout);
+
+   Not(in=yout,out=yyout);
+   And(a=yyout,b=f,out=yyfout);
+
+   Or(a=xyout,b=yyfout,out=fout);
+
+   Xor(a=fout,b=no,out=out);
+
+   Nand(a=out,b=ture,out=zr);
+   Not(in=out,out=ngout);
+   And(a=ngout,b=ture,out=ng);
+
+
 }
