@@ -1,6 +1,7 @@
 * code
 
-0	@0
+`
+@0
 D=A
 @2
 M=D
@@ -18,7 +19,7 @@ M=M-1
 0;JMP
 @16	
 0;JMP
-
+`
 * picture
 ![PICTURE1](https://github.com/eggwu96007/co109a/blob/master/homework/1112/picture/mult.PNG)
 
